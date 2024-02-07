@@ -10,7 +10,7 @@ $lesGenres=$req->fetchALL();
 <div class="container mt-5">
     <div class="row pt-3">
         <div class="col-9"><h2>Liste des genres</h2></div>
-        <div class="col-3"><a href=".php" class='btn btn-secondary'><i class="fa-solid fa-plus"></i> Créer un genre</a></div>
+        <div class="col-3"><a href="FormGenres.php?action=Ajouter" class='btn btn-secondary'><i class="fa-solid fa-plus"></i> Créer un genre</a></div>
     </div>
     <table class="table table-hover table-striped table-dark">
     <thead>
@@ -27,7 +27,7 @@ $lesGenres=$req->fetchALL();
         echo "<td class='col-md-2'>$genre->num</td>";
         echo "<td class='col-md-8'>$genre->libelle</td>";
         echo "<td class='col-md-2'>
-            <a href='' class='btn btn-primary'><i class='fa-solid fa-pen'></i></a>
+            <a href='FormGenres.php?action=Modifier&num=$genre->num' class='btn btn-primary'><i class='fa-solid fa-pen'></i></a>
             <a href='' class='btn btn-danger'><i class='fa-solid fa-trash'></i></a>
         </td>";
         echo "</tr>";
