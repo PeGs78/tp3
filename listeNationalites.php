@@ -38,7 +38,22 @@ $lesNationalites=$req->fetchALL();
     </table>
 
 </div>
-
+<div class="modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <a href="" class="btn btn-primary">Supprimer</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <?php include "footer.php";
 
