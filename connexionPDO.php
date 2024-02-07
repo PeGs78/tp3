@@ -1,5 +1,16 @@
 <?php
 
+
+
+
+
+
+
+
+
+
+
+
 $hostnom = 'host=btssio.dedyn.io';
 $usernom = 'BOULECT';
 $password = '20050324';
