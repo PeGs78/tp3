@@ -5,12 +5,14 @@ $continentSel="Tous";
 $texteReq="select n.num, n.libelle as 'libNation', c.libelle as 'libContinent' from nationalite n, continent c where n.numContinent=c.num";
   if(!empty($_GET)){
       $libelle=$_GET['libelle'];
+      var_dump($libelle);
       $continentSel=$_GET['continent'];
-      if( $libelle !=""){$texteReq.= " and libelle like '% " .$libelle. "%'";}
-      if($continentSel !="Tous"){$texteReq.= "and c.num = " .$continentSel;}
+      if($libelle !=""){$texteReq.=" and n.libelle like '%" .$libelle. "%'";}
+      if($continentSel !="Tous"){$texteReq.=" and c.num = " .$continentSel;}
   }
 
-  $texteReq .= " order by n.libelle";  
+  $texteReq.=" order by n.libelle";  
+  var_dump($texteReq);
 
 $req=$monPdo->prepare($texteReq);
 $req->setFetchMode(PDO::FETCH_OBJ);

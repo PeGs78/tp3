@@ -16,18 +16,13 @@ $nb=$req->execute();
 $message=$action == "Modifier" ? "modifiée" : "ajoutée" ;
 
 
-echo'<div class="container mt-5">';
-echo '<div class="row">
-    <div class="col mt-3">';
 if($nb == 1){
-    echo '<div class="alert alert-primary" role="alert">
-        La nationalité a bien été ' .$message. '
-        </div>';
+    $_SESSION['message']=['primary'=>"La nationalité a bien été: " .$action];
 }else{
-    echo '<div class="alert alert-danger" role="alert">
-    La nationalité n\'a pas été '.$message.' !
-    </div>';
+    $_SESSION['message']=['danger' => 'la nationalité n\'a pas été: '.$action];
 }
+header('location: listeGenres.php');
+exit();
 ?>
 </div>
 </div>
